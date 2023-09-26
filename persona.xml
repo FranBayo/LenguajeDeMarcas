@@ -1,0 +1,9 @@
+<persona>
+	<nombre>Marcos</nombre>
+	<edad>20</edad>
+	<direccion>
+		<calle>Inventada123</calle>
+		<cp>73482</cp>
+		<poblacion>Cadiz</poblacion>
+	</direccion>
+</persona>

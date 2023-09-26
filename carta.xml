@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ?: uno o ninguno
+*: infinito o ninguno
++: mínimo uno
+vacio: sólo uno
+los indicadores pueden ir dentro o fuera del paréntesis que indica el tipo de contenido que tienen las carpetas
+!ELEMENT (#PCDATA) = tiene que tener texto dentro
+!ELEMENT EMPTY = No puede tener texto dentro -->
+
+<!DOCTYPE carta [
+    <!ELEMENT carta (plato)+>
+    <!ELEMENT plato (nombre, descripcion, alergeno*, ingrediente+, vegano?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    <!ELEMENT alergeno (#PCDATA)>
+    <!ELEMENT ingrediente (inNombre, cantidad, medida)>
+    <!ELEMENT inNombre (#PCDATA)>
+    <!ELEMENT cantidad (#PCDATA)>
+    <!ELEMENT medida (#PCDATA)>
+    <!ELEMENT vegano EMPTY>
+]>
+
+<carta>
+    <plato>
+        <nombre>Macarrones</nombre>
+        <descripcion>Pasta con tomate</descripcion>
+        <ingrediente>
+            <inNombre>Tomate</inNombre>
+            <cantidad>2</cantidad>
+            <medida>unidades</medida>
+        </ingrediente>
+        <ingrediente>
+            <inNombre>Pasta</inNombre>
+            <cantidad>90</cantidad>
+            <medida>gramos</medida>
+        </ingrediente>
+        </vegano>
+    </plato>
+
+    <plato>
+        <nombre></nombre>
+        <descripcion></descripcion>
+        <alergeno></alergeno>
+        <ingrediente>
+            <inNombre></inNombre>
+            <cantidad></cantidad>
+            <medida></medida>
+        </ingrediente>
+        <ingrediente>
+            <inNombre></inNombre>
+            <cantidad></cantidad>
+            <medida></medida>
+        </ingrediente>
+        <ingrediente>
+            <inNombre></inNombre>
+            <cantidad></cantidad>
+            <medida></medida>
+        </ingrediente>
+    </plato>
+</carta>

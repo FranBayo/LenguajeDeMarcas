@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ejemplo producto:
+	<producto>
+		<nombre></nombre>
+		<descripcion></descripcion>
+		<precio></precio>
+		<caracteristicas></caracteristicas>
+	</producto>
+los € cuentan como texto -->
+
+<!-- ?: uno o ninguno
+*: infinito o ninguno
++: mínimo uno
+vacio: sólo uno -->
+
+<!DOCTYPE catalogo [
+	<!ELEMENT catalogo (producto)+>
+	<!ELEMENT producto (nombre, descripcion, precio, caracteristicas)>
+	<!ELEMENT nombre (#PCDATA)>
+	<!ELEMENT descripcion (#PCDATA)>
+	<!ELEMENT precio (#PCDATA)>
+	<!ELEMENT caracteristicas (caracteristica)*>
+	<!ELEMENT caracteristica (#PCDATA)>
+]>
+
+<catalogo>
+	<producto>
+		<nombre>Monitor A</nombre>
+		<descripcion>Monitor de color blanco</descripcion>
+		<precio>60</precio>
+		<caracteristicas>
+			<caracteristica nombre="precio">caro</caracteristica>
+			<caracteristica nombre="apariencia">feo</caracteristica>
+		</caracteristicas>
+	</producto>
+	<producto>
+		<nombre>Monitor B</nombre>
+		<descripcion>Monitor de color negro</descripcion>
+		<precio>120</precio>
+		<caracteristicas>
+			<caracteristica nombre="precio">caro</caracteristica>
+			<caracteristica nombre="apariencia">bonito</caracteristica>
+		</caracteristicas>
+	</producto>
+	<producto>
+		<nombre>Teclado A</nombre>
+		<descripcion>Teclado analógico bluetooth</descripcion>
+		<precio>15</precio>
+		<caracteristicas>
+			<caracteristica nombre="precio">barato</caracteristica>
+			<caracteristica nombre="apariencia">feo</caracteristica>
+		</caracteristicas>
+	</producto>
+	<producto>
+		<nombre>Teclado B</nombre>
+		<descripcion>Teclado mecánico con cable</descripcion>
+		<precio>30</precio>
+		<caracteristicas>
+			<caracteristica nombre="precio">barato</caracteristica>
+			<caracteristica nombre="apariencia">bonito</caracteristica>
+		</caracteristicas>
+	</producto>
+</catalogo>

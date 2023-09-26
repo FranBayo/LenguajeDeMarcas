@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- ?: uno o ninguno
+*: infinito o ninguno
++: mínimo uno
+vacio: sólo uno
+los indicadores pueden ir dentro o fuera del paréntesis que indica el tipo de contenido que tienen las carpetas -->
+
+<!DOCTYPE biblioteca [
+    <!ELEMENT biblioteca (libro)+>
+    <!ELEMENT libro (nombre, autor*, fecha?)>
+    <!ELEMENT nombre (#PCDATA)>
+    <!ELEMENT autor (#PCDATA)>
+    <!ELEMENT fecha (dia, mes, anio)>
+    <!ELEMENT dia (#PCDATA)>
+    <!ELEMENT mes (#PCDATA)>
+    <!ELEMENT anio (#PCDATA)>
+]>
+
+<biblioteca>
+    <libro>
+        <nombre></nombre>
+        <autor></autor>
+        <fecha>
+            <dia></dia>
+            <mes></mes>
+            <anio></anio>
+        </fecha>
+    </libro>
+
+    <libro>
+        <nombre></nombre>
+        <autor></autor>
+    </libro>
+</biblioteca>
